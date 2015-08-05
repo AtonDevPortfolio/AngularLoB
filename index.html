@@ -5,8 +5,41 @@
 	<title>Acme Product Management</title>
 
 	<!-- Library Scripts -->
+	<script src="js/angular.js"></script>
+	<!-- Application Script -->
+	<script src="app/app.js"></script>
+
+	<!-- Product Controllers -->
+	<script src="app/products/productListCtrl.js"></script>
 </head>
-<body ng-app>
-	
-</body>
+	<body ng-app="productManagement">
+		<table ng-controller="ProductListCtrl as vm">
+			<thead>
+				<tr>
+					<td>
+						<button type="button"
+											ng-click="vm.toggleImage()">
+							{{vm.showImage ? "Hide" : "Show"}} Images
+						</button>
+					</td>
+					<td>Products</td>
+					<td>Code</td>
+					<td>Availability</td>
+					<td>Price</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="product in vm.products">
+					<td><img ng-show="vm.showImage"
+									 ng-src="{{product.imageUrl}}"
+									 style="width:50px;margin:2px"
+									 title="{{product.productName}}"></td>
+					<td>{{ product.productName }}</td>
+					<td>{{ product.productCode }}</td>
+					<td>{{ product.releaseDate }}</td>
+					<td>{{ product.price | currency }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
 </html>
