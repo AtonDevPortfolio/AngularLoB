@@ -30,7 +30,7 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="product in vm.products">
-					<td><img ng-show="vm.showImage"
+					<td><img ng-if="vm.showImage"
 									 ng-src="{{product.imageUrl}}"
 									 style="width:50px;margin:2px"
 									 title="{{product.productName}}"></td>
