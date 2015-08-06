@@ -62,6 +62,8 @@
       var productUrl = "/api/products"
 
       $httpBackend.whenGET(productUrl).respond(products);
+      $httpBackend.whenGET(productUrl + "/1").respond(products);
+      $httpBackend.whenGET(productUrl + "/2").respond(products);
 
   })
 }());
