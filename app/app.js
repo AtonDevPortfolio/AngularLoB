@@ -1,18 +1,17 @@
-(function() {
-  "use strict";
+(function () {
+	"use strict";
   var app = angular.module("productManagement",
                           ["common.services",
                            "ui.router",
                            "productResourceMock"]);
 
-   app.config(["$stateProvider",
-                function($stateProvider) {
+  app.config(["$stateProvider", function ($stateProvider) {
                   $stateProvider
                     .state("productList", {
                       url: "/products",
                       templateUrl: "app/products/productListView.html",
                       controller: "ProductListCtrl as vm"
-                    })
+                    });
                 }]
               );
 }());
