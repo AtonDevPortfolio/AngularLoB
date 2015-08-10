@@ -18,7 +18,7 @@
 				url: "/products",
 				templateUrl: "app/products/productListView.html",
 				controller: "ProductListCtrl as vm"
-			});
+			})
 		//Product Edit
 			.state("productEdit", {
 				url: "/products/edit/:productId",
