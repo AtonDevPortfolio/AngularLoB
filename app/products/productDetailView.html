@@ -16,11 +16,11 @@
 				</div>
 				<div class="row">
 					<div class="col-md-2">Description:</div>
-					<div class="col-md-6">{{vm.product.productDescription}}</div>
+					<div class="col-md-6">{{vm.product.description}}</div>
 				</div>
 				<div class="row">
 					<div class="col-md-2">Availability:</div>
-					<div class="col-md-6">{{vm.product.productreleaseDate|date}}</div>
+					<div class="col-md-6">{{vm.product.releaseDate|date}}</div>
 				</div>
 				<div class="row">
 					<div class="col-md-2">Cost:</div>
@@ -32,11 +32,11 @@
 				</div>
 				<div class="row">
 					<div class="col-md-2">Margin:</div>
-					<div class="col-md-6">{{vm.marginPrecent| number:0}}</div>
+					<div class="col-md-6">{{ vm.marginPercent | number:0 }}</div>
 				</div>
 				<div class="row">
 					<div class="col-md-2">Tags:</div>
-					<div class="col-md-6">{{vm.product.taglist}}</div>
+					<div class="col-md-6">{{vm.product.tagList}}</div>
 				</div>
 			</div><!--end table rows-->
 			<div class="col-md-6">
@@ -57,8 +57,8 @@
 			Back		 		
 		</a>
 		<a class="btn btn-primary"
-			 ui-sref="productEdit{{productId: vmproductProductId}}"
-			 style="width:50px;margin-left:10px">
+			 ui-sref="productEdit.info ({productId: vm.product.productId})"
+			 style="width:80px;margin-left:10px">
 			Edit
 		</a>
 	</div>

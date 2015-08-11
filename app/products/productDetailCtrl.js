@@ -4,23 +4,13 @@
 	angular
 		.module("productManagement")
 		.controller("ProductDetailCtrl",
-								ProductDetailCtrl);
+								["product",
+								ProductDetailCtrl]);
 	
-	function ProductDetailCtrl() {
+	function ProductDetailCtrl(product) {
 		var vm = this;
 		
-		vm.product = {
-          "productId": 2,
-          "productName" : "Leaf Rake",
-          "productCode" : "GDN-0011",
-          "releaseDate" : "03/19/2009",
-          "description" : "Leaf Rake with 48-inch handle.",
-          "cost" : "9.00",
-          "price" : "19.95",
-          "catagory" : "garden",
-          "tags" : ["leaf", "tool"],
-          "imageUrl" : "http://placehold.it/350x150"
-        };
+		vm.product = product;
 		
 		vm.title = "Product Detail: " + vm.product.productName;
 		
