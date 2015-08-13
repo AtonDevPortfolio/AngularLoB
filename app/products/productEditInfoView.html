@@ -7,7 +7,8 @@
 			</label>
 			<input id="inputProductName"
 					 type="text"
-					 placeholder="Product Name" />
+					 placeholder="Product Name"
+					 ng-model="vm.product.productName" />
 		</div>
 		<div>
 			<label for="inputDescription">
@@ -15,6 +16,7 @@
 			</label>
 			<textarea id="inputDescription":
 							placeholder="Description"
+					 		ng-model="vm.product.description"
 							rows="3" />
 		</div>
   </fieldset>
