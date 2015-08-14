@@ -1,6 +1,7 @@
 <form class="form-horizontal" name="productForm">
 	<fieldset>
   	<legend>Basic Product Information</legend>
+<!--		Product Name Input-->
    	<div class="form-group">
 			<label class="col-md-2 control-label"
 	 					 for="inputProductName">
@@ -14,6 +15,7 @@
 					 		 ng-model="vm.product.productName" />
 			</div>
 		</div>
+<!--		Product Code Input-->
 		<div class="form-group">
 			<label class="col-md-2 control-label"
 						 for="inputProductCode">
@@ -32,6 +34,7 @@
 						 class="col-md-2 control-label">
 				Availability
 			</label>
+<!--			Date Input-->
 			<div class="col-md-4">
 				<input type="text"
 							 class="form-control"
@@ -47,7 +50,7 @@
 			 	</span>
 			</div>
 		</div>
-		
+<!--		Description unput-->
 		<div class="form-group">
 			<label class="col-md-2 control-label"
 						 for="inputDescription">
@@ -59,6 +62,24 @@
 							placeholder="Description"
 					 		ng-model="vm.product.description"
 							rows="3" />
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-4 col-md-offset-2">
+				<span>
+					<button class="btn btn-primary"
+									style="width:80px;margin-right:10px"
+									ng-click="vm.submit()">
+					Save				
+					</button>
+				</span>
+				<span>
+					<button class="btn btn-default"
+									style="width:70px"
+									ng-click="vm.cancel()">
+						Cancel
+					</button>
+				</span>
 			</div>
 		</div>
   </fieldset>
